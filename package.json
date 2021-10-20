@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "axios": "*",
+        "laravel-mix": "*",
+        "lodash": "*",
+        "resolve-url-loader": "^4.0.0"
+    },
+    "dependencies": {
+        "jquery": "^3.6.0",
+        "webpack": "^5.58.1"
+    }
+}

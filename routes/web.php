@@ -25,5 +25,4 @@ Route::resource('posts', PostController::class);
 Route::post('comments', [CommentController::class, 'store'])->name('comments.store');
 // Route::post('posts/edit/{post}', [PostController::class, 'post_update'])->name('posts_update');
 Route::patch('posts/like/{id}', [LikesController::class, 'update'])->name('likes.update');
-Route::get('/destroy', [HomeController::class, 'destroy'])->name('destroy');
 Route::get('search', [PostController::class, 'search'])->name('search');

@@ -88,8 +88,10 @@
         const count = document.querySelector('#count')
         const icon = document.querySelector('#fa-heart')
         const id = parseInt(classname.getAttribute('data-id'))
-        
-        
+        console.log(liked)
+        if (liked.includes(id)) {
+          icon.style.color = 'red'
+        }
 
         classname.addEventListener('click', function() {
           if (!liked.includes(id)) {
@@ -100,9 +102,10 @@
               }
             })
             .then(function (response) {
-              liked = response.data.liked
+              liked = Object.values(response.data.liked)
               count.innerHTML = response.data.currentCount
               icon.style.color = 'red'
+              console.log(liked)
             })
             .catch(function (error) {
               console.log(error)
@@ -118,9 +121,10 @@
               }
             })
             .then(function (response) {
-              liked = response.data.liked
+              liked = Object.values(response.data.liked)
               count.innerHTML = response.data.currentCount
               icon.style.color = '#92929274'
+              console.log(liked)
             })
             .catch(function (error) {
               console.log(error)

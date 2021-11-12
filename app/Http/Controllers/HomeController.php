@@ -32,4 +32,9 @@ class Homecontroller extends Controller
         // return View('posts', ['name' => 'index', 'content' => 'All Posts']);
     }
 
+    public function destroy(Request $request)
+    {
+        $request->session()->flush();
+        return redirect(route('home'));
+    }
 }

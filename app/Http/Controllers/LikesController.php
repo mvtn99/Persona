@@ -23,7 +23,6 @@ class LikesController extends Controller
             $post->save();
             $request->session()->push('liked', $post->id);
             $liked = session('liked');
-            session()->flash('success_message', 'Quantity was updated successfully!');
             return response()->json(['currentCount' => $post->likes, 'liked' => $liked, 'success' => true]);
         }
 

@@ -1,4 +1,4 @@
-<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark hero-box" style="background-image: url({{ productImage($top3[0]->image) }})">
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark hero-box" style="background-image: url({{ productImage($top3[0]->image) }}); background-size: contain;">
   <div class="col-md-6 px-0">
     <h1 class="display-4 fst-italic">{{ $top3[0]->title }}</h1>
     <p class="lead my-3">{{ strip_tags(substr($top3[0]->body, 0, 180)) }}</p>
